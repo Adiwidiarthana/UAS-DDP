@@ -1,0 +1,47 @@
+Nama	: I Kadek Adi Widiarthana
+Nim	: 2101010043
+Kelas	: Sistem Informasi Malam
+
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+	
+	int jenis, lama, harga, tambahan, jam_tambahan;
+	
+	cout << "TARIF PARKIR KENDARAAN" << endl;
+	cout << "1. Mobil" << endl;
+	cout << "2. Motor" << endl;
+	cout << endl;
+	cout << "Masukan Jenis Kendaraan  : ";
+	cin >> jenis;
+	switch (jenis){
+		case 1 :
+			    harga = 5000;
+			    tambahan = 1000;
+			    break;
+		case 2 :
+		        harga = 2000;
+				tambahan = 500;
+				break;
+		daflut :
+		       	harga = 0;    
+	}
+	cout << "Masukan Lama Parkir (Per Jam) : ";
+	cin >> lama;
+	if (lama > 2){
+		jam_tambahan = ((lama - 2)*tambahan);
+	} 
+	else{
+		 jam_tambahan = 0;
+	}
+	cout << "__________" << endl;
+	cout << "2 Jam Pertama  Rp :" << harga << endl;
+	cout << "Jam Tambahan Rp :" << jam_tambahan << endl;
+	cout << "Total Bayar    Rp :" << harga + jam_tambahan << endl;
+	
+	return 0;
+}
